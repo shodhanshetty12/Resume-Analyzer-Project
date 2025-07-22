@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSecure Panel - Authentication</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="auth-container">
+        <div class="auth-flipper">
+            <div class="auth-form-wrapper" id="login-form">
+                <div class="auth-form-content">
+                    <h1 class="form-title">SYSTEM LOGIN</h1>
+                    <form id="loginForm">
+                        <div class="input-group">
+                            <i class="bi bi-envelope-at"></i>
+                            <input type="email" id="loginEmail" placeholder="Email Address" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="bi bi-key"></i>
+                            <input type="password" id="loginPassword" placeholder="Password" required>
+                            <i class="bi bi-eye-slash" id="toggleLoginPassword"></i>
+                        </div>
+                        <div class="form-options">
+                            <label><input type="checkbox" id="rememberMe"> Remember Me</label>
+                        </div>
+                        <button type="submit" class="glowing-btn">
+                            <span class="glowing-txt">A<span class="faulty-letter">U</span>THENTICATE</span>
+                        </button>
+                    </form>
+                    <p class="form-switch-text">
+                        No account? <a href="#" id="show-register">Register here.</a>
+                    </p>
+                    <div id="login-loader" class="loader" style="display: none;"></div>
+                    <p id="login-error" class="error-message"></p>
+                </div>
+            </div>
+
+            <div class="auth-form-wrapper" id="register-form" style="display: none;">
+                <div class="auth-form-content">
+                    <h1 class="form-title">CREATE ACCOUNT</h1>
+                    <form id="registerForm">
+                        <div class="input-group">
+                            <i class="bi bi-person"></i>
+                            <input type="text" id="registerUsername" placeholder="Username" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="bi bi-envelope-at"></i>
+                            <input type="email" id="registerEmail" placeholder="Email Address" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="bi bi-key"></i>
+                            <input type="password" id="registerPassword" placeholder="Password" required>
+                             <i class="bi bi-eye-slash" id="toggleRegisterPassword"></i>
+                        </div>
+                        <div class="password-strength">
+                            <div class="strength-bar" id="strength-bar"></div>
+                            <p id="strength-text">Password Strength</p>
+                        </div>
+                        <button type="submit" class="glowing-btn">
+                            <span class="glowing-txt">R<span class="faulty-letter">E</span>GISTER</span>
+                        </button>
+                    </form>
+                    <p class="form-switch-text">
+                        Already have an account? <a href="#" id="show-login">Login here.</a>
+                    </p>
+                    <p id="register-error" class="error-message"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
